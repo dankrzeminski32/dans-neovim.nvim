@@ -25,6 +25,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local removewhitespaceopts = { noremap = true, silent = true }
 
 keymap('n', '<leader>e', ':Lex 30<cr>', opts)
 --
@@ -42,3 +43,6 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Delete blanklines in a visual block --
+keymap('v', 'rws', ':g/^$/d<CR>:noh<CR>', removewhitespaceopts)
