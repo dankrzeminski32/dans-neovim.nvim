@@ -18,6 +18,7 @@ require('lazy').setup({
   require 'kickstart/plugins/theme',
 
   require 'kickstart/plugins/todo-comments',
+  require 'kickstart/plugins/treesitter',
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
